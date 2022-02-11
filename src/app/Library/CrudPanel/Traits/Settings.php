@@ -26,7 +26,7 @@ trait Settings
      * Setter for the settings key-value store.
      *
      * @param  string  $key  Usually operation.name (ex: reorder.max_level)
-     * @param  bool  $value  True/false depending on success.
+     * @param  string  $value  The value being set
      */
     public function set(string $key, $value)
     {
