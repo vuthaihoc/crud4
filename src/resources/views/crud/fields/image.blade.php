@@ -283,22 +283,27 @@
                     if(crop) {
                         $rotateLeft.click(function() {
                             $mainImage.cropper("rotate", 90);
+                            $mainImage.trigger('cropend');
                         });
 
                         $rotateRight.click(function() {
                             $mainImage.cropper("rotate", -90);
+                            $mainImage.trigger('cropend');
                         });
 
                         $zoomIn.click(function() {
                             $mainImage.cropper("zoom", 0.1);
+                            $mainImage.trigger('cropend');
                         });
 
                         $zoomOut.click(function() {
                             $mainImage.cropper("zoom", -0.1);
+                            $mainImage.trigger('cropend');
                         });
 
                         $reset.click(function() {
                             $mainImage.cropper("reset");
+                            $mainImage.trigger('cropend');
                         });
                     }
             }
