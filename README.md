@@ -73,14 +73,43 @@ Alternatively, if you don't have 20 minutes right now, subscribe to our [drip em
 
 ## Install
 
-Installation guides:
-- [Install Backpack 4.1 on Laravel 6, 7 or 8](https://backpackforlaravel.com/docs/4.1/installation) - recommended;
-- [Install Backpack 4.0 on Laravel 5.8, 6 or 7](https://backpackforlaravel.com/docs/4.0/installation) - last feature update was 21st Apr 2020;
-- [Install Backpack 3.6 on Laravel 5.8 or 6.x](https://backpackforlaravel.com/docs/3.6/installation) - last feature update was 17th Sep 2019;
-- [Install Backpack 3.5 on Laravel 5.5, 5.6, 5.7](https://backpackforlaravel.com/docs/3.5/installation) - last feature update was 27th Feb 2019;
-- [Install Backpack 3.x on Laravel 5.4](https://laravel-backpack.readme.io/docs/install-on-laravel-54) - last feature update was 27 Sep 2017;
-- [Install Backpack 3.x on Laravel 5.3](https://laravel-backpack.readme.io/docs/installation-on-laravel-53) - last feature update was 02 Feb 2017;
-- [Install Backpack 3.x on Laravel 5.2](https://laravel-backpack.readme.io/docs/installation) - deprecated, lacks a lot of features;
+---
+
+<a name="requirements"></a>
+## Requirements
+
+If you can run Laravel 8, you can install Backpack. Backpack does _not_ have additional requirements. For the following process, we assume:
+
+- you have a [working installation of Laravel](https://laravel.com/docs/7.x#installation) (an existing project is fine, you don't need a *fresh* Laravel install);
+
+- you have configured your .ENV file with your database and mail information;
+
+- you can run the ```composer``` command from any directory (you have ```composer``` registered as a global command); if you need to run ```php composer.phar``` or reference another directory, please remember to adapt the commands below to your configuration;
+
+<a name="installation"></a>
+## Installation
+
+<a name="install-core-packages"></a>
+### Install Core Packages
+
+0) Open your project folder in your terminal:
+
+```bash
+cd your-laravel-project-name
+```
+
+1) In your project's main directory:
+
+``` bash
+# require Backpack using Composer
+composer require vuthaihoc/crud:"4.2.*"
+composer require --dev backpack/generators:"3.1.11"
+
+# run the installation command
+php artisan backpack:install
+```
+
+> Backpack install is interactive and will ask questions during instalation, if you don't want that add the `--no-interaction` argument to the install command.
 
 ## Change Log
 
